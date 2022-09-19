@@ -3,10 +3,12 @@ header {
 }
 
 .header-top {
+    max-width: 88.6%;
     @include childAlign(flex-end);
-    padding: 10px;
 
     h1 {
-        font-size: 0.69rem;
+        font-size: 0.68rem;
+        padding: 16px 0 4px;
+        color: rgba($dark-color, 0.6);
     }
 }
