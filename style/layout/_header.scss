@@ -8,7 +8,18 @@ header {
 
     h1 {
         font-size: 0.68rem;
-        padding: 16px 0 4px;
+        padding: 16px 0 24px;
         color: rgba($dark-color, 0.6);
+    }
+}
+
+
+.header-main {
+    max-width: 79%;
+    margin: 0 auto;
+    @include childAlign(space-between);
+
+    &_left {
+        display: flex;
     }
 }
