@@ -59,4 +59,18 @@ a {
 /************************ TYPOGRAPHY *****************************/
 * {
   font-family: Barlow, Arial, Tahoma, Verdana, Helvetica, sans-serif;
+}
+
+header {
+  background: #FFFFFF;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.header-top h1 {
+  font-size: 0.69rem;
 }/*# sourceMappingURL=style.css.map */

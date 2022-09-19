@@ -1,0 +1,12 @@
+header {
+    background: $white;
+}
+
+.header-top {
+    @include childAlign(flex-end);
+    padding: 10px;
+
+    h1 {
+        font-size: 0.69rem;
+    }
+}
