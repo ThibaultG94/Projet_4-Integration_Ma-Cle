@@ -63,10 +63,9 @@ a {
   font-family: Barlow, Arial, Tahoma, Verdana, Helvetica, sans-serif;
 }
 
-header {
+.header {
   background: #FFFFFF;
 }
-
 .header-top {
   max-width: 88.6%;
   display: flex;
@@ -78,8 +77,7 @@ header {
   padding: 16px 0 24px;
   color: rgba(68, 94, 140, 0.6);
 }
-
-.header-main {
+.header-nav {
   max-width: 79%;
   margin: 0 auto;
   display: flex;
@@ -87,23 +85,23 @@ header {
   justify-content: space-between;
   position: relative;
 }
-.header-main_left {
+.header-nav_container {
   display: flex;
   align-items: center;
 }
-.header-main_left-logo {
+.header-nav_container-logo {
   margin-right: 40px;
 }
-.header-main_left-logo img {
+.header-nav_container-logo img {
   transition: transform 0.3s ease;
 }
-.header-main_left-logo img:hover {
+.header-nav_container-logo img:hover {
   transform: translateY(5px);
 }
-.header-main_left-nav ul {
+.header-nav_container-list ul {
   display: flex;
 }
-.header-main_left-nav li {
+.header-nav_container-list li {
   font-size: 1.06rem;
   font-weight: 600;
   line-height: 20px;
@@ -112,7 +110,7 @@ header {
   cursor: pointer;
   transition: all 0.3s;
 }
-.header-main_left-nav li::before {
+.header-nav_container-list li::before {
   content: "";
   height: 20px;
   background: rgba(68, 94, 140, 0.4);
@@ -120,19 +118,54 @@ header {
   position: absolute;
   left: 0;
 }
-.header-main_left-nav li:first-child::before {
+.header-nav_container-list li:first-child::before {
   content: unset;
 }
-.header-main_left-nav li:hover {
+.header-nav_container-list li:hover {
   background-color: #C92E34;
 }
-.header-main_left-nav li:hover > a {
+.header-nav_container-list li:hover > a {
   color: #FFFFFF;
 }
+.header-nav_container-list a {
+  color: #464646;
+}
+.header-nav_container-list_item:hover > .header-sous_menu {
+  opacity: 1;
+}
+.header-nav_link-button {
+  margin-right: 18px !important;
+}
+.header-nav_link-button:hover {
+  background-color: #1C94B9;
+  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.25);
+}
+.header-sous_menu {
+  margin-top: 20px;
+  position: absolute;
+  display: block !important;
+  min-width: 210px;
+  left: 0;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+.header-sous_menu li::before {
+  content: unset;
+}
+.header-sous_menu li:hover > a {
+  color: #FFFFFF !important;
+}
+.header-sous_menu a {
+  font-size: 1.06rem;
+  line-height: 18px;
+}
+
 .btn {
   background: #C92E34;
   color: #FFFFFF;
-  padding: 11px 25px;
-  border-radius: 30px;
+  padding: 10px 25px 12px 24px;
+  border-radius: 50px;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }/*# sourceMappingURL=style.css.map */

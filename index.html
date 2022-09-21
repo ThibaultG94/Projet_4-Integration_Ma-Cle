@@ -23,20 +23,26 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="header-top">
             <h1>Conciergerie gestion locative de courte durée en Ile de France</h1>
         </div>
-        <div class="header-main">
-            <div class="header-main_left">
-                <div class="header-main_left-logo">
+        <div class="header-nav">
+            <div class="header-nav_container">
+                <div class="header-nav_container-logo">
                     <a href="#">
                         <img src="./assets/img/headerlogo.webp" alt="Logo ma Clé">
                     </a>
                 </div>
-                <div class="header-main_left-nav">
+                <div class="header-nav_container-list">
                     <ul>
-                        <li><a href="#">Ma Clé</a></li>
+                        <li class="header-nav_container-list_item">
+                            <a href="#">Ma Clé</a>
+                            <ul class="header-sous_menu">
+                                <li><a href="#">Pourquoi faire appel à un mandataire</a></li>
+                                <li><a href="#">Loi Alur et obligations du mandataire immobilier</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">Conciergerie</a></li>
                         <li><a href="#">Etat des lieux</a></li>
                         <li><a href="#">Organisation de visite</a></li>
@@ -45,8 +51,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="header-main_rigth">
-                <a class="btn header-main_right-button">Confiez-nous votre bien</a>
+            <div class="header-nav_link">
+                <a class="header-nav_link-button btn">Confiez-nous votre bien</a>
             </div>
         </div>
     </header>
