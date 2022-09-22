@@ -38,6 +38,7 @@
             &-list {
                 ul {
                     display: flex;
+                    transition: all 0.3s;
                 }
 
                 li {
@@ -71,13 +72,15 @@
                             color: $white;
                         }
 
-                        // &>.header-sous_menu {
-                        //     // opacity: 1;
-                        // }
+                        &>.header-sous_menu {
+                            opacity: 1;
+                            z-index: 1;
+                            transform: translateY(0px);
+                        }
 
-                        // &>li {
-                        //     z-index: 100 !important;
-                        // }
+                        &>.trick {
+                            z-index: 1;
+                        }
                     }
                 }
 
@@ -85,14 +88,15 @@
                     color: $font;
                 }
 
-                &_item {
+                // &_item {
 
-                    &:hover {
-                        &>.header-sous_menu {
-                            opacity: 1;
-                        }
-                    }
-                }
+                //     &:hover {
+                //         &>.header-sous_menu {
+                //             opacity: 1;
+                //             z-index: 1;
+                //         }
+                //     }
+                // }
             }
         }
 
@@ -109,6 +113,7 @@
     }
 
     &-sous_menu {
+        transform: translateY(-20px);
         margin-top: 20px;
         position: absolute;
         display: block !important;
@@ -116,7 +121,8 @@
         left: 0;
         box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
         opacity: 0;
-        // z-index: -1;
+        z-index: -1;
+        transition: all 0.3;
 
         & li {
 
@@ -137,4 +143,14 @@
         }
 
     }
+}
+
+.trick {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    bottom: -12px;
+    opacity: 0;
+    z-index: -1;
 }
