@@ -3,7 +3,7 @@ let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50 && window.scrollY > lastScroll) {
-    navHeader.style.transform = "translateY(-200px)";
+    navHeader.style.transform = "translateY(-150px)";
   }
 
   if (window.scrollY < 120 && window.scrollY < lastScroll) {
