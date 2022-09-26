@@ -74,13 +74,19 @@ header {
   padding-bottom: 17px;
   position: fixed;
   width: 100%;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 .header-top {
-  max-width: 89.4%;
+  max-width: 78.8%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+@media screen and (max-width: 1500px) {
+  .header-top {
+    max-width: 94%;
+  }
 }
 .header-top h1 {
   font-size: 0.68rem;
@@ -94,6 +100,11 @@ header {
   align-items: center;
   justify-content: space-between;
   position: relative;
+}
+@media screen and (max-width: 1500px) {
+  .header-nav {
+    max-width: 94%;
+  }
 }
 .header-nav_container {
   display: flex;
@@ -120,6 +131,11 @@ header {
   position: relative;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media screen and (max-width: 1500px) {
+  .header-nav_container-list li {
+    font-size: 0.94rem;
+  }
 }
 .header-nav_container-list li::before {
   content: "";
@@ -149,9 +165,30 @@ header {
 .header-nav_container-list a {
   color: #464646;
 }
+.header-nav_link-button {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1500px) {
+  .header-nav_link-button {
+    font-size: 0.94rem;
+    max-width: 14rem;
+    text-align: center;
+    padding: 9px 15px 8px !important;
+  }
+}
 .header-nav_link-button:hover {
   background-color: #1C94B9;
   box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.25);
+}
+.header-nav_link span {
+  color: #FFFFFF;
+}
+@media screen and (max-width: 1500px) {
+  .header-nav_link span {
+    max-width: 7rem;
+    line-height: 17px;
+  }
 }
 .header-sous_menu {
   transform: translateY(-10px);
@@ -195,8 +232,7 @@ header {
 
 .btn {
   background: #C92E34;
-  color: #FFFFFF;
-  padding: 10px 25px 12px 24px;
+  padding: 13px 25px 13px 24px;
   border-radius: 50px;
   font-weight: 500;
   cursor: pointer;
