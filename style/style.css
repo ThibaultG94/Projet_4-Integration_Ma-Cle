@@ -64,12 +64,20 @@ a {
   font-family: Barlow, Arial, Tahoma, Verdana, Helvetica, sans-serif;
 }
 
+header {
+  background: #FFFFFF;
+  height: 135.88px;
+}
+
 .header {
   background: #FFFFFF;
-  margin-bottom: 17px;
+  padding-bottom: 17px;
+  position: fixed;
+  width: 100%;
+  transition: transform 0.4s ease;
 }
 .header-top {
-  max-width: 88.6%;
+  max-width: 89.4%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -140,9 +148,6 @@ a {
 }
 .header-nav_container-list a {
   color: #464646;
-}
-.header-nav_link-button {
-  margin-right: 18px !important;
 }
 .header-nav_link-button:hover {
   background-color: #1C94B9;

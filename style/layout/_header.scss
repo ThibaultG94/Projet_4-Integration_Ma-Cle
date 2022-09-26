@@ -1,10 +1,18 @@
+header {
+    background: $white;
+    height: 135.88px;
+}
+
 .header {
     background: $white;
-    margin-bottom: 17px;
+    padding-bottom: 17px;
+    position: fixed;
+    width: 100%;
+    transition: transform 0.4s ease;
 
 
     &-top {
-        max-width: 88.6%;
+        max-width: 89.4%;
         @include childAlign(flex-end);
 
         h1 {
@@ -93,7 +101,6 @@
 
         &_link {
             &-button {
-                margin-right: 18px !important;
 
                 &:hover {
                     background-color: $highlight-color;
