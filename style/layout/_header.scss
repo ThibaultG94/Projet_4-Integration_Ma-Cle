@@ -3,6 +3,10 @@ header {
     height: 135.88px;
     display: flex;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 1024px) {
+        height: 60px;
+    }
 }
 
 .header {
@@ -11,7 +15,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s;
 
 
     &-top {
@@ -21,6 +25,10 @@ header {
 
         @media screen and (max-width: 1500px) {
             max-width: 94%;
+        }
+
+        @media screen and (max-width: 1024px) {
+            display: none;
         }
 
         h1 {
@@ -39,6 +47,10 @@ header {
 
         @media screen and (max-width: 1500px) {
             max-width: 94%;
+        }
+
+        @media screen and (max-width: 1024px) {
+            height: 60px;
         }
 
 
@@ -68,6 +80,7 @@ header {
             }
 
             &-list {
+
                 ul {
                     display: flex;
                     transition: opacity 0.2s linear, transform 0.2s ease-in-out;
@@ -81,6 +94,7 @@ header {
                     position: relative;
                     cursor: pointer;
                     transition: all 0.3s;
+                    background: $white;
 
                     @media screen and (max-width: 1500px) {
                         font-size: 0.94rem;
@@ -211,4 +225,6 @@ header {
 .aSuprimer {
     height: 200vh;
     background-color: $primary-color;
+    position: relative;
+    z-index: 0;
 }
