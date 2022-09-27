@@ -1,18 +1,21 @@
 header {
     background: $white;
     height: 135.88px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .header {
     background: $white;
-    padding-bottom: 17px;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     transition: transform 0.4s ease-in-out;
 
 
     &-top {
-        max-width: 78.8%;
+        max-width: 1500px;
         margin: 0 auto;
         @include childAlign(flex-end);
 
@@ -22,16 +25,17 @@ header {
 
         h1 {
             font-size: 0.68rem;
-            padding: 16px 0 24px;
+            padding: 16px 0 9px;
             color: rgba($dark-color, 0.6);
         }
     }
 
     &-nav {
-        max-width: 79%;
+        max-width: 1500px;
         margin: 0 auto;
         @include childAlign(space-between);
         position: relative;
+        height: 100px;
 
         @media screen and (max-width: 1500px) {
             max-width: 94%;
@@ -41,12 +45,21 @@ header {
         &_container {
             display: flex;
             align-items: center;
+            height: 68px;
 
             &-logo {
                 margin-right: 40px;
 
+                @media screen and (max-width: 1300px) {
+                    margin-right: 20px;
+                }
+
                 img {
                     transition: transform 0.3s ease;
+
+                    @media screen and (max-width: 1300px) {
+                        max-height: 50px;
+                    }
 
                     &:hover {
                         transform: translateY(5px);
@@ -71,6 +84,10 @@ header {
 
                     @media screen and (max-width: 1500px) {
                         font-size: 0.94rem;
+                    }
+
+                    @media screen and (max-width: 1300px) {
+                        padding: 7px 7px 9px;
                     }
 
 
