@@ -225,6 +225,10 @@ header {
   z-index: -1;
 }
 
+.shadow-header {
+  box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.15);
+}
+
 .aSuprimer {
   height: 200vh;
   background-color: #437EA6;

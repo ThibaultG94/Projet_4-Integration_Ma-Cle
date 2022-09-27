@@ -187,6 +187,10 @@ header {
     z-index: -1;
 }
 
+.shadow-header {
+    box-shadow: 0 0 5rem 0 rgb(0 0 0 / 15%);
+}
+
 .aSuprimer {
     height: 200vh;
     background-color: $primary-color;
