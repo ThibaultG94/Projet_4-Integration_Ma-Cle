@@ -129,8 +129,8 @@ header {
 
                         &>.header-sous_menu {
                             opacity: 1;
-                            z-index: 1;
                             transform: translateY(0px);
+                            left: 0;
                         }
 
                         &>.trick {
@@ -181,13 +181,14 @@ header {
         position: absolute;
         display: block !important;
         min-width: 210px;
-        left: 0;
+        left: -900px;
         box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
         opacity: 0;
-        z-index: -1;
+        transition: 0.3s ease;
 
         & li {
             transition: 0.3s ease;
+            z-index: -1;
 
             &::before {
                 content: unset;
@@ -226,5 +227,5 @@ header {
     height: 200vh;
     background-color: $primary-color;
     position: relative;
-    z-index: 0;
+    z-index: -10;
 }
