@@ -2,6 +2,12 @@ let navHeader = document.querySelector(".header");
 let lastScroll = 0;
 const shadowHeader = document.querySelector(".shadow-header");
 
+const toggleMenu = document.querySelector(".header-nav_toggle-menu");
+
+//--------------
+// NAVBAR SCROLL
+//--------------
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > 10 && window.scrollY > lastScroll) {
     navHeader.style.transform = "translateY(-100%)";
@@ -14,4 +20,12 @@ window.addEventListener("scroll", () => {
   }
 
   lastScroll = window.scrollY;
+});
+
+//------------
+// TOGGLE MENU
+//------------
+
+toggleMenu.addEventListener("click", () => {
+  console.log("test");
 });

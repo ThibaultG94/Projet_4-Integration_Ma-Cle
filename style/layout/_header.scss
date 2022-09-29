@@ -88,7 +88,7 @@ header {
                     transition: opacity 0.2s linear, transform 0.2s ease-in-out;
 
                     @media screen and (max-width: 1024px) {
-                        display: none;
+                        flex-direction: column;
                     }
                 }
 
@@ -129,8 +129,16 @@ header {
                     &:hover {
                         background-color: $secondary-color;
 
+                        @media screen and (max-width: 1025px) {
+                            background: $white;
+                        }
+
                         &>a {
                             color: $white;
+
+                            @media screen and (max-width: 1025px) {
+                                color: $secondary-color;
+                            }
                         }
 
                         &>.header-sous_menu {
@@ -147,6 +155,16 @@ header {
 
                 a {
                     color: $font;
+                }
+
+                &-item {
+                    &--home {
+                        display: none;
+
+                        @media screen and (max-width: 1024px) {
+                            display: block;
+                        }
+                    }
                 }
             }
         }
@@ -234,6 +252,15 @@ header {
                     font-weight: 700;
                     text-transform: uppercase;
                     margin-top: 3px;
+                }
+            }
+
+            &_ul {
+                @media screen and (max-width: 1024px) {
+                    position: fixed;
+                    top: 60px;
+                    left: 0;
+                    width: 100%;
                 }
             }
         }
