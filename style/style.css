@@ -124,6 +124,7 @@ header {
   .header-nav {
     height: 60px;
     margin: 0 0 0 auto;
+    max-width: 97%;
   }
 }
 .header-nav_container {
@@ -153,6 +154,11 @@ header {
 .header-nav_container-list ul {
   display: flex;
   transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+}
+@media screen and (max-width: 1024px) {
+  .header-nav_container-list ul {
+    display: none;
+  }
 }
 .header-nav_container-list li {
   font-size: 1.06rem;
@@ -202,6 +208,11 @@ header {
 .header-nav_container-list a {
   color: #464646;
 }
+@media screen and (max-width: 1024px) {
+  .header-nav_link {
+    margin-right: 68px;
+  }
+}
 .header-nav_link-button {
   display: flex;
   flex-wrap: wrap;
@@ -217,7 +228,7 @@ header {
 @media screen and (max-width: 1024px) {
   .header-nav_link-button {
     border-radius: 0 !important;
-    padding: 7px 15px !important;
+    padding: 5px 14px 7px !important;
   }
 }
 .header-nav_link-button:hover {
