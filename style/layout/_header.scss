@@ -51,6 +51,7 @@ header {
 
         @media screen and (max-width: 1024px) {
             height: 60px;
+            margin: 0 0 0 auto;
         }
 
 
@@ -158,6 +159,11 @@ header {
                     padding: 9px 15px 8px !important;
                 }
 
+                @media screen and (max-width: 1024px) {
+                    border-radius: 0 !important;
+                    padding: 7px 15px !important;
+                }
+
                 &:hover {
                     background-color: $highlight-color;
                     box-shadow: 0 0 3rem 0 rgb(0 0 0 / 25%);
@@ -170,6 +176,55 @@ header {
                 @media screen and (max-width: 1500px) {
                     max-width: 7rem;
                     line-height: 17px;
+                }
+
+                @media screen and (max-width: 1024px) {
+                    font-size: 0.81rem;
+                    line-height: 14px;
+                }
+            }
+        }
+
+        &_toggle-menu {
+            display: none;
+
+            @media screen and (max-width: 1024px) {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: $white;
+                height: 60px;
+                width: 60px;
+                background: $secondary-color;
+                cursor: pointer;
+            }
+
+            &-content {
+                @include childAlign(center);
+                flex-direction: column;
+
+                &_lines {
+                    width: 24px;
+                    height: 17px;
+                    color: $white;
+
+                    &-line {
+                        content: '';
+                        display: block;
+                        height: 2px;
+                        width: 24px;
+                        background: $white;
+                        margin-bottom: 4px;
+                    }
+                }
+
+                &_label {
+                    color: $white;
+                    font-size: 0.6rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-top: 3px;
                 }
             }
         }
