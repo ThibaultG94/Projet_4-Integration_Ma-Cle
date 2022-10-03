@@ -3,6 +3,7 @@ let lastScroll = 0;
 const shadowHeader = document.querySelector(".shadow-header");
 
 const toggleMenu = document.querySelector(".header-nav_toggle-menu");
+const navMenu = document.querySelector(".header-nav_toggle-menu_ul");
 
 //--------------
 // NAVBAR SCROLL
@@ -27,5 +28,6 @@ window.addEventListener("scroll", () => {
 //------------
 
 toggleMenu.addEventListener("click", () => {
-  console.log("test");
+  navMenu.classList.toggle("clicked");
+  console.log(navMenu);
 });

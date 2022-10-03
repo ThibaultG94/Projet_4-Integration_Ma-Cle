@@ -220,6 +220,11 @@ header {
   transform: translateY(0px);
   left: 0;
 }
+@media screen and (max-width: 1024px) {
+  .header-nav_container-list li:hover > .header-sous_menu {
+    opacity: 0;
+  }
+}
 .header-nav_container-list li:hover > .trick {
   z-index: 1;
 }
@@ -344,6 +349,7 @@ header {
     top: 60px;
     left: 0;
     width: 100%;
+    opacity: 0;
   }
 }
 .header-sous_menu {
@@ -412,6 +418,11 @@ header {
   background-color: #437EA6;
   position: relative;
   z-index: -10;
+}
+
+.clicked {
+  opacity: 1;
+  transition: 0.3s opacity;
 }
 
 .btn {
