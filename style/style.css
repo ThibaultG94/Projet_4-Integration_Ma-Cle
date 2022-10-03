@@ -384,8 +384,23 @@ header {
 @media screen and (max-width: 1024px) {
   .trick {
     position: relative;
-    width: 100px;
+    width: 14px;
+    height: 24px;
+    opacity: 1;
+    z-index: 0;
+    background: #FFFFFF;
   }
+}
+.trick svg {
+  height: 14px;
+  width: 14px;
+  transform: rotate(0);
+  position: absolute;
+  top: -5px;
+  right: 0;
+  stroke: #445E8C;
+  stroke-width: 1px;
+  margin-left: 1em;
 }
 
 .shadow-header {
