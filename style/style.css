@@ -237,6 +237,7 @@ header {
     height: 100%;
     padding: 8px 0 1px 5px;
     display: inline-block;
+    transform: translateX(-10px);
   }
 }
 .header-nav_container-list_item--home {
@@ -250,9 +251,12 @@ header {
   }
 }
 .header-nav_container-list_item--home-link {
+  opacity: 0;
   padding: 8px 0 1px 5px;
   height: 100%;
   width: 100%;
+  transform: translateX(-10px);
+  transition: transform 0.2s ease-in-out 0.2s, opacity 0.2s linear 0.2s;
 }
 .header-nav_container-list_item--home-link-svg {
   fill: #C92E34;
@@ -350,7 +354,7 @@ header {
     left: 0;
     width: 100%;
     opacity: 0;
-    transition: 0.3s opacity ease-in-out;
+    transition: 0.3s opacity;
   }
 }
 .header-sous_menu {
@@ -444,6 +448,11 @@ header {
 
 .clicked-height {
   height: 100vh;
+}
+
+.clicked-translateX {
+  transform: translateX(0) !important;
+  opacity: 1;
 }
 
 .btn {
