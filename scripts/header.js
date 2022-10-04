@@ -30,5 +30,6 @@ window.addEventListener("scroll", () => {
 
 toggleMenu.addEventListener("click", () => {
   darkWindow.classList.toggle("clicked-opacity");
+  darkWindow.classList.toggle("clicked-height");
   navMenu.classList.toggle("clicked-opacity");
 });
