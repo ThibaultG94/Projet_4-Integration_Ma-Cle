@@ -175,6 +175,7 @@ header {
                             padding: 8px 0 1px 5px;
                             display: inline-block;
                             transform: translateX(-10px);
+                            opacity: 0;
                         }
                     }
 
@@ -397,6 +398,30 @@ header {
     }
 }
 
+.first-item {
+    transition: transform 0.2s ease-in-out 0.2s, opacity 0.2s linear 0.2s;
+}
+
+.second-item {
+    transition: transform 0.2s ease-in-out 0.25s, opacity 0.2s linear 0.25s;
+}
+
+.third-item {
+    transition: transform 0.2s ease-in-out 0.3s, opacity 0.2s linear 0.3s;
+}
+
+.fourth-item {
+    transition: transform 0.2s ease-in-out 0.35s, opacity 0.2s linear 0.35s;
+}
+
+.fifth-item {
+    transition: transform 0.2s ease-in-out 0.4s, opacity 0.2s linear 0.4s;
+}
+
+.sixth-item {
+    transition: transform 0.2s ease-in-out 0.45s, opacity 0.2s linear 0.45s;
+}
+
 .clicked-opacity {
     opacity: 1;
 }
@@ -407,5 +432,5 @@ header {
 
 .clicked-translateX {
     transform: translateX(0) !important;
-    opacity: 1;
+    opacity: 1 !important;
 }
