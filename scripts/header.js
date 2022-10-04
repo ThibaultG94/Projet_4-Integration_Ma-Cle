@@ -4,6 +4,7 @@ const shadowHeader = document.querySelector(".shadow-header");
 
 const toggleMenu = document.querySelector(".header-nav_toggle-menu");
 const navMenu = document.querySelector(".header-nav_toggle-menu_ul");
+const darkWindow = document.querySelector(".dark-window");
 
 //--------------
 // NAVBAR SCROLL
@@ -28,6 +29,6 @@ window.addEventListener("scroll", () => {
 //------------
 
 toggleMenu.addEventListener("click", () => {
-  navMenu.classList.toggle("clicked");
-  console.log(navMenu);
+  darkWindow.classList.toggle("clicked-opacity");
+  navMenu.classList.toggle("clicked-opacity");
 });
