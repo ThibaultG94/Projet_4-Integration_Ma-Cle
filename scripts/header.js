@@ -38,8 +38,9 @@ window.addEventListener("scroll", () => {
 //------------
 
 toggleMenu.addEventListener("click", () => {
-  darkWindow.classList.toggle("clicked-opacity");
-  darkWindow.classList.toggle("clicked-height");
+  darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
+  darkWindow.classList.add("clicked-opacity");
+  darkWindow.classList.add("clicked-height");
   navMenu.classList.toggle("clicked-opacity");
   homeItem.classList.toggle("clicked-translateX");
   firstItem.classList.toggle("clicked-translateX");
@@ -48,4 +49,20 @@ toggleMenu.addEventListener("click", () => {
   fourthItem.classList.toggle("clicked-translateX");
   fifthItem.classList.toggle("clicked-translateX");
   sixthItem.classList.toggle("clicked-translateX");
+});
+
+//--------------
+// MEDIA QUERIES
+//--------------
+
+window.addEventListener("resize", (e) => {
+  if (e.target.outerWidth > 1024) {
+    darkWindow.style.transition = "none";
+    darkWindow.classList.remove('clicked-opacity"');
+    darkWindow.classList.remove("clicked-height");
+  } else {
+    darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
+    darkWindow.classList.add('clicked-opacity"');
+    darkWindow.classList.add("clicked-height");
+  }
 });
