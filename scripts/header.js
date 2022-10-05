@@ -14,6 +14,7 @@ const thirdItem = document.querySelector(".third-item");
 const fourthItem = document.querySelector(".fourth-item");
 const fifthItem = document.querySelector(".fifth-item");
 const sixthItem = document.querySelector(".sixth-item");
+let toggleClicked = false;
 
 //--------------
 // NAVBAR SCROLL
@@ -38,17 +39,34 @@ window.addEventListener("scroll", () => {
 //------------
 
 toggleMenu.addEventListener("click", () => {
-  darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
-  darkWindow.classList.add("clicked-opacity");
-  darkWindow.classList.add("clicked-height");
-  navMenu.classList.toggle("clicked-opacity");
-  homeItem.classList.toggle("clicked-translateX");
-  firstItem.classList.toggle("clicked-translateX");
-  secondtItem.classList.toggle("clicked-translateX");
-  thirdItem.classList.toggle("clicked-translateX");
-  fourthItem.classList.toggle("clicked-translateX");
-  fifthItem.classList.toggle("clicked-translateX");
-  sixthItem.classList.toggle("clicked-translateX");
+  if (toggleClicked === false) {
+    darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
+    darkWindow.classList.add("clicked-opacity");
+    darkWindow.classList.add("clicked-height");
+    navMenu.classList.add("clicked-opacity");
+    homeItem.classList.add("clicked-translateX");
+    firstItem.classList.add("clicked-translateX");
+    secondtItem.classList.add("clicked-translateX");
+    thirdItem.classList.add("clicked-translateX");
+    fourthItem.classList.add("clicked-translateX");
+    fifthItem.classList.add("clicked-translateX");
+    sixthItem.classList.add("clicked-translateX");
+    toggleClicked = true;
+  } else if (toggleClicked === true) {
+    darkWindow.classList.remove("clicked-opacity");
+    darkWindow.classList.remove("clicked-height");
+    navMenu.classList.remove("clicked-opacity");
+    homeItem.classList.remove("clicked-translateX");
+    firstItem.classList.remove("clicked-translateX");
+    secondtItem.classList.remove("clicked-translateX");
+    thirdItem.classList.remove("clicked-translateX");
+    fourthItem.classList.remove("clicked-translateX");
+    fifthItem.classList.remove("clicked-translateX");
+    sixthItem.classList.remove("clicked-translateX");
+    toggleClicked = false;
+  } else {
+    alert("SITE CASSE :(");
+  }
 });
 
 //--------------
@@ -58,11 +76,33 @@ toggleMenu.addEventListener("click", () => {
 window.addEventListener("resize", (e) => {
   if (e.target.outerWidth > 1024) {
     darkWindow.style.transition = "none";
-    darkWindow.classList.remove('clicked-opacity"');
+    darkWindow.classList.remove("clicked-opacity");
     darkWindow.classList.remove("clicked-height");
-  } else {
-    darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
-    darkWindow.classList.add('clicked-opacity"');
-    darkWindow.classList.add("clicked-height");
+    navMenu.classList.remove("clicked-opacity");
+    homeItem.classList.remove("clicked-translateX");
+    firstItem.classList.remove("clicked-translateX");
+    secondtItem.classList.remove("clicked-translateX");
+    thirdItem.classList.remove("clicked-translateX");
+    fourthItem.classList.remove("clicked-translateX");
+    fifthItem.classList.remove("clicked-translateX");
+    sixthItem.classList.remove("clicked-translateX");
+  } else if (e.target.outerWidth <= 1024) {
+    if (toggleClicked === true) {
+      darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
+      darkWindow.classList.add("clicked-opacity");
+      darkWindow.classList.add("clicked-height");
+      navMenu.classList.add("clicked-opacity");
+      homeItem.classList.add("clicked-translateX");
+      firstItem.classList.add("clicked-translateX");
+      secondtItem.classList.add("clicked-translateX");
+      thirdItem.classList.add("clicked-translateX");
+      fourthItem.classList.add("clicked-translateX");
+      fifthItem.classList.add("clicked-translateX");
+      sixthItem.classList.add("clicked-translateX");
+    } else {
+      // darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
+      darkWindow.classList.add('clicked-opacity"');
+      darkWindow.classList.add("clicked-height");
+    }
   }
 });
