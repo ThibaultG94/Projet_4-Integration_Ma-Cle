@@ -38,71 +38,60 @@ window.addEventListener("scroll", () => {
 // TOGGLE MENU
 //------------
 
+// FUNCTION ADD
+function addProperties() {
+  darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
+  darkWindow.classList.add("clicked-opacity");
+  darkWindow.classList.add("clicked-height");
+  navMenu.classList.add("clicked-opacity");
+  homeItem.classList.add("clicked-translateX");
+  firstItem.classList.add("clicked-translateX");
+  secondtItem.classList.add("clicked-translateX");
+  thirdItem.classList.add("clicked-translateX");
+  fourthItem.classList.add("clicked-translateX");
+  fifthItem.classList.add("clicked-translateX");
+  sixthItem.classList.add("clicked-translateX");
+}
+
+// FUNCTION REMOVE
+function removeProperties() {
+  darkWindow.classList.remove("clicked-opacity");
+  darkWindow.classList.remove("clicked-height");
+  navMenu.classList.remove("clicked-opacity");
+  homeItem.classList.remove("clicked-translateX");
+  firstItem.classList.remove("clicked-translateX");
+  secondtItem.classList.remove("clicked-translateX");
+  thirdItem.classList.remove("clicked-translateX");
+  fourthItem.classList.remove("clicked-translateX");
+  fifthItem.classList.remove("clicked-translateX");
+  sixthItem.classList.remove("clicked-translateX");
+}
+
+// ADD EVENT LISTENER
+
 toggleMenu.addEventListener("click", () => {
   if (toggleClicked === false) {
-    darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
-    darkWindow.classList.add("clicked-opacity");
-    darkWindow.classList.add("clicked-height");
-    navMenu.classList.add("clicked-opacity");
-    homeItem.classList.add("clicked-translateX");
-    firstItem.classList.add("clicked-translateX");
-    secondtItem.classList.add("clicked-translateX");
-    thirdItem.classList.add("clicked-translateX");
-    fourthItem.classList.add("clicked-translateX");
-    fifthItem.classList.add("clicked-translateX");
-    sixthItem.classList.add("clicked-translateX");
+    addProperties();
     toggleClicked = true;
   } else if (toggleClicked === true) {
-    darkWindow.classList.remove("clicked-opacity");
-    darkWindow.classList.remove("clicked-height");
-    navMenu.classList.remove("clicked-opacity");
-    homeItem.classList.remove("clicked-translateX");
-    firstItem.classList.remove("clicked-translateX");
-    secondtItem.classList.remove("clicked-translateX");
-    thirdItem.classList.remove("clicked-translateX");
-    fourthItem.classList.remove("clicked-translateX");
-    fifthItem.classList.remove("clicked-translateX");
-    sixthItem.classList.remove("clicked-translateX");
+    removeProperties();
     toggleClicked = false;
   } else {
     alert("SITE CASSE :(");
   }
 });
 
-//--------------
 // MEDIA QUERIES
-//--------------
 
 window.addEventListener("resize", (e) => {
   if (e.target.outerWidth > 1024) {
     darkWindow.style.transition = "none";
-    darkWindow.classList.remove("clicked-opacity");
-    darkWindow.classList.remove("clicked-height");
-    navMenu.classList.remove("clicked-opacity");
-    homeItem.classList.remove("clicked-translateX");
-    firstItem.classList.remove("clicked-translateX");
-    secondtItem.classList.remove("clicked-translateX");
-    thirdItem.classList.remove("clicked-translateX");
-    fourthItem.classList.remove("clicked-translateX");
-    fifthItem.classList.remove("clicked-translateX");
-    sixthItem.classList.remove("clicked-translateX");
+    removeProperties();
   } else if (e.target.outerWidth <= 1024) {
     if (toggleClicked === true) {
-      darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
-      darkWindow.classList.add("clicked-opacity");
-      darkWindow.classList.add("clicked-height");
-      navMenu.classList.add("clicked-opacity");
-      homeItem.classList.add("clicked-translateX");
-      firstItem.classList.add("clicked-translateX");
-      secondtItem.classList.add("clicked-translateX");
-      thirdItem.classList.add("clicked-translateX");
-      fourthItem.classList.add("clicked-translateX");
-      fifthItem.classList.add("clicked-translateX");
-      sixthItem.classList.add("clicked-translateX");
-    } else {
-      // darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
-      darkWindow.classList.add('clicked-opacity"');
-      darkWindow.classList.add("clicked-height");
+      addProperties();
     }
   }
 });
+
+darkWindow.classList.add("clicked-opacity");
