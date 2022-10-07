@@ -402,13 +402,13 @@ header {
   bottom: -17px;
   opacity: 0;
   z-index: -1;
+  transform: translateX(-10px);
 }
 @media screen and (max-width: 1024px) {
   .trick {
     position: relative;
     width: 14px;
     height: 24px;
-    opacity: 1;
     z-index: 0;
     background: #FFFFFF;
   }
@@ -450,15 +450,18 @@ header {
   }
 }
 
-.first-item {
+.first-item,
+.first-trick {
   transition: transform 0.2s ease-in-out 0.2s, opacity 0.2s linear 0.2s;
 }
 
-.second-item {
+.second-item,
+.second-trick {
   transition: transform 0.2s ease-in-out 0.25s, opacity 0.2s linear 0.25s;
 }
 
-.third-item {
+.third-item,
+.third-trick {
   transition: transform 0.2s ease-in-out 0.3s, opacity 0.2s linear 0.3s;
 }
 
@@ -466,7 +469,8 @@ header {
   transition: transform 0.2s ease-in-out 0.35s, opacity 0.2s linear 0.35s;
 }
 
-.fifth-item {
+.fifth-item,
+.fifth-trick {
   transition: transform 0.2s ease-in-out 0.4s, opacity 0.2s linear 0.4s;
 }
 

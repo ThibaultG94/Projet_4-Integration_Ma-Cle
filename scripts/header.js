@@ -49,10 +49,14 @@ function addProperties() {
   navMenu.classList.add("clicked-opacity");
   homeItem.classList.add("clicked-translateX");
   firstItem.classList.add("clicked-translateX");
+  document.querySelector(".first-trick").classList.add("clicked-translateX");
   secondtItem.classList.add("clicked-translateX");
+  document.querySelector(".second-trick").classList.add("clicked-translateX");
   thirdItem.classList.add("clicked-translateX");
+  document.querySelector(".third-trick").classList.add("clicked-translateX");
   fourthItem.classList.add("clicked-translateX");
   fifthItem.classList.add("clicked-translateX");
+  document.querySelector(".fifth-trick").classList.add("clicked-translateX");
   sixthItem.classList.add("clicked-translateX");
   toggleIcon.classList.add("active");
 }
@@ -64,10 +68,16 @@ function removeProperties() {
   navMenu.classList.remove("clicked-opacity");
   homeItem.classList.remove("clicked-translateX");
   firstItem.classList.remove("clicked-translateX");
+  document.querySelector(".first-trick").classList.remove("clicked-translateX");
   secondtItem.classList.remove("clicked-translateX");
+  document
+    .querySelector(".second-trick")
+    .classList.remove("clicked-translateX");
   thirdItem.classList.remove("clicked-translateX");
+  document.querySelector(".third-trick").classList.remove("clicked-translateX");
   fourthItem.classList.remove("clicked-translateX");
   fifthItem.classList.remove("clicked-translateX");
+  document.querySelector(".fifth-trick").classList.remove("clicked-translateX");
   sixthItem.classList.remove("clicked-translateX");
   toggleIcon.classList.remove("active");
 }
