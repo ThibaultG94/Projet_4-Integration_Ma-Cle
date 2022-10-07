@@ -255,6 +255,11 @@ header {
         &_toggle-menu {
             display: none;
 
+            span {
+                transition: 0.3s ease-in-out;
+                transform-origin: center;
+            }
+
             @media screen and (max-width: 1024px) {
                 display: block;
                 position: absolute;
@@ -272,15 +277,18 @@ header {
                 flex-direction: column;
 
                 &_lines {
-                    width: 24px;
-                    height: 17px;
+                    // width: 24px;
+                    height: 22px;
                     color: $white;
+                    @include childAlign(center);
+                    flex-direction: column;
+                    margin: 0 auto;
 
                     &-line {
                         content: '';
                         display: block;
                         height: 2px;
-                        width: 24px;
+                        width: 22px;
                         background: $white;
                         margin-bottom: 4px;
                     }
@@ -329,7 +337,7 @@ header {
 
             &:hover {
                 &>a {
-                    color: $white  !important;
+                    color: $white !important;
                 }
             }
         }
@@ -439,4 +447,21 @@ header {
 
 .translation {
     transform: translateX(-10px);
+}
+
+.active span:nth-child(1) {
+    margin-left: 5px;
+    transform-origin: left;
+    transform: rotate(45deg);
+}
+
+.active span:nth-child(2) {
+    opacity: 0;
+    height: 8px;
+}
+
+.active span:nth-child(3) {
+    margin-left: 5px;
+    transform-origin: left;
+    transform: rotate(-45deg);
 }

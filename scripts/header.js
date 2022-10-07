@@ -8,6 +8,9 @@ const darkWindow = document.querySelector(".dark-window");
 const homeItem = document.querySelector(
   ".header-nav_container-list_item--home-link"
 );
+const toggleIcon = document.querySelector(
+  ".header-nav_toggle-menu-content_lines"
+);
 const firstItem = document.querySelector(".first-item");
 const secondtItem = document.querySelector(".second-item");
 const thirdItem = document.querySelector(".third-item");
@@ -51,6 +54,7 @@ function addProperties() {
   fourthItem.classList.add("clicked-translateX");
   fifthItem.classList.add("clicked-translateX");
   sixthItem.classList.add("clicked-translateX");
+  toggleIcon.classList.add("active");
 }
 
 // FUNCTION REMOVE
@@ -65,6 +69,7 @@ function removeProperties() {
   fourthItem.classList.remove("clicked-translateX");
   fifthItem.classList.remove("clicked-translateX");
   sixthItem.classList.remove("clicked-translateX");
+  toggleIcon.classList.remove("active");
 }
 
 // ADD EVENT LISTENER
