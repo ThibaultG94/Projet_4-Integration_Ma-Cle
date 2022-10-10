@@ -57,7 +57,7 @@ function addProperties() {
   fourthItem.classList.add("clicked-translateX");
   fifthItem.classList.add("clicked-translateX");
   document.querySelector(".fifth-trick").classList.add("clicked-translateX");
-  sixthItem.classList.add("clicked-translateX");
+  // sixthItem.classList.add("clicked-translateX");
   toggleIcon.classList.add("active");
 }
 
@@ -78,7 +78,7 @@ function removeProperties() {
   fourthItem.classList.remove("clicked-translateX");
   fifthItem.classList.remove("clicked-translateX");
   document.querySelector(".fifth-trick").classList.remove("clicked-translateX");
-  sixthItem.classList.remove("clicked-translateX");
+  // sixthItem.classList.remove("clicked-translateX");
   toggleIcon.classList.remove("active");
 }
 
