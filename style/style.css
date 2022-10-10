@@ -366,7 +366,20 @@ header {
     width: 100%;
     opacity: 0;
     transition: 0.3s opacity;
+    background: #FFFFFF;
   }
+}
+.header-nav_toggle-menu_ul_sous-menu {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .header-nav_toggle-menu_ul_sous-menu li {
+    width: 100%;
+    background: #F5F5F5;
+  }
+}
+.header-nav_toggle-menu_ul_sous-menu li a {
+  font-size: 1.1rem;
 }
 .header-sous_menu {
   transform: translateY(-10px);
@@ -423,6 +436,9 @@ header {
   stroke: #445E8C;
   stroke-width: 1px;
   margin-left: 1em;
+}
+.trick svg:hover {
+  stroke: #C92E34;
 }
 
 .shadow-header {

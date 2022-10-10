@@ -310,6 +310,22 @@ header {
                     width: 100%;
                     opacity: 0;
                     transition: 0.3s opacity;
+                    background: $white;
+                }
+
+                &_sous-menu {
+                    display: none;
+
+                    li {
+                        @media screen and (max-width: 1024px) {
+                            width: 100%;
+                            background: #F5F5F5;
+                        }
+
+                        a {
+                            font-size: 1.1rem;
+                        }
+                    }
                 }
             }
         }
@@ -363,7 +379,6 @@ header {
         position: relative;
         width: 14px;
         height: 24px;
-        // opacity: 1;
         z-index: 0;
         background: $white;
     }
@@ -378,6 +393,10 @@ header {
         stroke: $dark-color;
         stroke-width: 1px;
         margin-left: 1em;
+
+        &:hover {
+            stroke: $secondary-color;
+        }
     }
 }
 
