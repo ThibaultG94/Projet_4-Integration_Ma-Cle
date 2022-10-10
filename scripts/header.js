@@ -43,6 +43,7 @@ window.addEventListener("scroll", () => {
 
 // FUNCTION ADD
 function addProperties() {
+  document.body.style.overflow = "hidden";
   darkWindow.style.transition = "opacity 0.6s ease, height 0.6s ease";
   darkWindow.classList.add("clicked-opacity");
   darkWindow.classList.add("clicked-height");
@@ -71,6 +72,7 @@ function addTransition() {
 
 // FUNCTION REMOVE
 function removeProperties() {
+  document.body.style.overflow = "visible";
   darkWindow.classList.remove("clicked-opacity");
   darkWindow.classList.remove("clicked-height");
   navMenu.classList.remove("clicked-opacity");
