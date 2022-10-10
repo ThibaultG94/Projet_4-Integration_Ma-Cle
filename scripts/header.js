@@ -61,6 +61,14 @@ function addProperties() {
   toggleIcon.classList.add("active");
 }
 
+function addTransition() {
+  let index = 20;
+  document.querySelectorAll(".trick").forEach((button) => {
+    button.style.transition = `transform 0.2s ease-in-out 0.${index}s, opacity 0.2s linear 0.${index}s`;
+    index = index + 5;
+  });
+}
+
 // FUNCTION REMOVE
 function removeProperties() {
   darkWindow.classList.remove("clicked-opacity");
@@ -82,14 +90,23 @@ function removeProperties() {
   toggleIcon.classList.remove("active");
 }
 
+function removeTransition() {
+  document.querySelectorAll(".trick").forEach((button) => {
+    console.log("test");
+    button.style.transition = "none";
+  });
+}
+
 // ADD EVENT LISTENER
 
 toggleMenu.addEventListener("click", () => {
   if (toggleClicked === false) {
     addProperties();
+    addTransition();
     toggleClicked = true;
   } else if (toggleClicked === true) {
     removeProperties();
+    removeTransition();
     toggleClicked = false;
   } else {
     alert("SITE CASSE :(");
@@ -102,9 +119,11 @@ window.addEventListener("resize", (e) => {
   if (e.target.outerWidth > 1024) {
     darkWindow.style.transition = "none";
     removeProperties();
+    removeTransition();
   } else if (e.target.outerWidth <= 1024) {
     if (toggleClicked === true) {
       addProperties();
+      addTransition();
     }
   }
 });
