@@ -369,19 +369,6 @@ header {
     background: #FFFFFF;
   }
 }
-.header-nav_toggle-menu_ul_sous-menu li {
-  display: none;
-}
-@media screen and (max-width: 1024px) {
-  .header-nav_toggle-menu_ul_sous-menu li {
-    width: 100%;
-    background: #F5F5F5;
-  }
-}
-.header-nav_toggle-menu_ul_sous-menu li a {
-  font-size: 1.1rem;
-  padding: 5px 0 5px 10px;
-}
 .header-sous_menu {
   transform: translateY(-10px);
   margin-top: 25px;
@@ -393,9 +380,27 @@ header {
   opacity: 0;
   transition: 0.3s ease;
 }
+@media screen and (max-width: 1024px) {
+  .header-sous_menu {
+    opacity: 1;
+    transform: translateX(0);
+    margin-top: 0;
+    position: inherit;
+    min-width: unset;
+    box-shadow: none;
+  }
+}
 .header-sous_menu li {
   transition: 0.3s ease;
   z-index: -1;
+}
+@media screen and (max-width: 1024px) {
+  .header-sous_menu li {
+    z-index: 0;
+    background: #F5F5F5;
+    display: none;
+    padding: 14px 0 14px 10px;
+  }
 }
 .header-sous_menu li::before {
   content: unset;
@@ -406,6 +411,11 @@ header {
 .header-sous_menu a {
   font-size: 1.06rem;
   line-height: 18px;
+}
+@media screen and (max-width: 1024px) {
+  .header-sous_menu a {
+    padding: 5px 0 5px 10px;
+  }
 }
 
 .trick {
@@ -526,7 +536,7 @@ header {
 }
 
 .li-active {
-  display: block !important;
+  display: inline-block !important;
 }
 
 .btn {

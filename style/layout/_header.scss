@@ -312,24 +312,6 @@ header {
                     transition: 0.3s opacity;
                     background: $white;
                 }
-
-                &_sous-menu {
-
-
-                    li {
-                        display: none;
-
-                        @media screen and (max-width: 1024px) {
-                            width: 100%;
-                            background: #F5F5F5;
-                        }
-
-                        a {
-                            font-size: 1.1rem;
-                            padding: 5px 0 5px 10px;
-                        }
-                    }
-                }
             }
         }
     }
@@ -345,9 +327,25 @@ header {
         opacity: 0;
         transition: 0.3s ease;
 
+        @media screen and (max-width: 1024px) {
+            opacity: 1;
+            transform: translateX(0);
+            margin-top: 0;
+            position: inherit;
+            min-width: unset;
+            box-shadow: none;
+        }
+
         & li {
             transition: 0.3s ease;
             z-index: -1;
+
+            @media screen and (max-width: 1024px) {
+                z-index: 0;
+                background: #F5F5F5;
+                display: none;
+                padding: 14px 0 14px 10px;
+            }
 
             &::before {
                 content: unset;
@@ -363,8 +361,11 @@ header {
         & a {
             font-size: 1.06rem;
             line-height: 18px;
-        }
 
+            @media screen and (max-width: 1024px) {
+                padding: 5px 0 5px 10px;
+            }
+        }
     }
 }
 
@@ -488,5 +489,5 @@ header {
 }
 
 .li-active {
-    display: block !important;
+    display: inline-block !important;
 }

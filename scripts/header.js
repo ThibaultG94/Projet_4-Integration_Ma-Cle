@@ -139,7 +139,7 @@ document.querySelectorAll(".trick > svg").forEach((svg) => {
         });
         break;
       default:
-        alert("Error");
+        console.log("Error li-active");
         break;
     }
   });
