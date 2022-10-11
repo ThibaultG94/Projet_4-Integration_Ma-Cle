@@ -117,31 +117,9 @@ toggleMenu.addEventListener("click", () => {
 
 document.querySelectorAll(".trick > svg").forEach((svg) => {
   svg.addEventListener("click", (e) => {
-    switch (e.target.id) {
-      case "one":
-        document.querySelectorAll(".one").forEach((li) => {
-          li.classList.toggle("li-active");
-        });
-        break;
-      case "two":
-        document.querySelectorAll(".two").forEach((li) => {
-          li.classList.toggle("li-active");
-        });
-        break;
-      case "three":
-        document.querySelectorAll(".three").forEach((li) => {
-          li.classList.toggle("li-active");
-        });
-        break;
-      case "four":
-        document.querySelectorAll(".four").forEach((li) => {
-          li.classList.toggle("li-active");
-        });
-        break;
-      default:
-        console.log("Error li-active");
-        break;
-    }
+    document.querySelectorAll(`.${e.target.id}`).forEach((li) => {
+      li.classList.toggle("li-active");
+    });
   });
 });
 
