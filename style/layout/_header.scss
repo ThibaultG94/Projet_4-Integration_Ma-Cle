@@ -314,9 +314,11 @@ header {
                 }
 
                 &_sous-menu {
-                    display: none;
+
 
                     li {
+                        display: none;
+
                         @media screen and (max-width: 1024px) {
                             width: 100%;
                             background: #F5F5F5;
@@ -324,6 +326,7 @@ header {
 
                         a {
                             font-size: 1.1rem;
+                            padding: 5px 0 5px 10px;
                         }
                     }
                 }
@@ -482,4 +485,8 @@ header {
     margin-left: 5px;
     transform-origin: left;
     transform: rotate(-45deg);
+}
+
+.li-active {
+    display: block !important;
 }

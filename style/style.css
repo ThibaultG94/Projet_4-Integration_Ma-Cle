@@ -369,7 +369,7 @@ header {
     background: #FFFFFF;
   }
 }
-.header-nav_toggle-menu_ul_sous-menu {
+.header-nav_toggle-menu_ul_sous-menu li {
   display: none;
 }
 @media screen and (max-width: 1024px) {
@@ -380,6 +380,7 @@ header {
 }
 .header-nav_toggle-menu_ul_sous-menu li a {
   font-size: 1.1rem;
+  padding: 5px 0 5px 10px;
 }
 .header-sous_menu {
   transform: translateY(-10px);
@@ -522,6 +523,10 @@ header {
   margin-left: 5px;
   transform-origin: left;
   transform: rotate(-45deg);
+}
+
+.li-active {
+  display: block !important;
 }
 
 .btn {
