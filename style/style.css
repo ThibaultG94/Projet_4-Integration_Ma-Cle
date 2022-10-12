@@ -182,7 +182,7 @@ header {
 }
 @media screen and (max-width: 1024px) {
   .header-nav_container-list li {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -373,12 +373,28 @@ header {
   transform: translateY(-10px);
   margin-top: 25px;
   position: absolute;
-  display: block !important;
+  display: block;
   min-width: 210px;
   left: -1200px;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: 0.3s ease;
+}
+.header-sous_menu--large {
+  display: block !important;
+}
+@media screen and (max-width: 1024px) {
+  .header-sous_menu--large {
+    display: none !important;
+  }
+}
+.header-sous_menu--small {
+  display: none !important;
+}
+@media screen and (max-width: 1024px) {
+  .header-sous_menu--small {
+    display: block !important;
+  }
 }
 @media screen and (max-width: 1024px) {
   .header-sous_menu {

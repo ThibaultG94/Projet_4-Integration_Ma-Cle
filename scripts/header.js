@@ -94,7 +94,6 @@ function removeProperties() {
 
 function removeTransition() {
   document.querySelectorAll(".trick").forEach((button) => {
-    console.log("test");
     button.style.transition = "none";
   });
 }
