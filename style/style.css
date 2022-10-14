@@ -148,6 +148,16 @@ header {
     max-height: 50px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .header-nav_container-logo img {
+    max-height: 45px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-nav_container-logo img {
+    max-height: 40px;
+  }
+}
 .header-nav_container-logo img:hover {
   transform: translateY(5px);
 }

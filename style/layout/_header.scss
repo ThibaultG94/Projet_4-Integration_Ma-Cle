@@ -73,6 +73,14 @@ header {
                         max-height: 50px;
                     }
 
+                    @media screen and (max-width: 1024px) {
+                        max-height: 45px;
+                    }
+
+                    @media screen and (max-width: 650px) {
+                        max-height: 40px;
+                    }
+
                     &:hover {
                         transform: translateY(5px);
                     }
