@@ -418,6 +418,7 @@ header {
         stroke: $dark-color;
         stroke-width: 1px;
         margin-left: 1em;
+        transition: transform 0.2s ease-in-out;
 
         &:hover {
             stroke: $secondary-color;
@@ -511,4 +512,8 @@ header {
 
 .li-active {
     display: inline-block !important;
+}
+
+.arrow-active {
+    transform: rotate(90deg) !important;
 }

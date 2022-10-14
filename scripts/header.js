@@ -119,6 +119,8 @@ document.querySelectorAll(".trick > svg").forEach((svg) => {
     document.querySelectorAll(`.${e.target.id}`).forEach((li) => {
       li.classList.toggle("li-active");
     });
+    svg.classList.toggle("arrow-active");
+    // svg.style.transform = "rotate(90deg)";
   });
 });
 
