@@ -2,14 +2,14 @@ let navHeader = document.querySelector(".header");
 let lastScroll = 0;
 const shadowHeader = document.querySelector(".shadow-header");
 
-const toggleMenu = document.querySelector(".header-nav_toggle-menu");
-const navMenu = document.querySelector(".header-nav_toggle-menu_ul");
+const toggleMenu = document.querySelector(".header-wrapper_toggle-menu");
+const navMenu = document.querySelector(".navbar");
 const darkWindow = document.querySelector(".dark-window");
 const homeItem = document.querySelector(
-  ".header-nav_container-list_item--home-link"
+  ".navbar_container-navbar_item--home-link"
 );
 const toggleIcon = document.querySelector(
-  ".header-nav_toggle-menu-content_lines"
+  ".header-wrapper_toggle-menu-content_lines"
 );
 const firstItem = document.querySelector(".first-item");
 const secondtItem = document.querySelector(".second-item");

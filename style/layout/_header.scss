@@ -37,7 +37,7 @@ header {
         }
     }
 
-    &-nav {
+    &-wrapper {
         max-width: 1500px;
         margin: 0 auto;
         @include childAlign(space-between);
@@ -87,7 +87,7 @@ header {
                 }
             }
 
-            &-list {
+            &-navbar {
 
                 ul {
                     display: flex;
@@ -174,12 +174,6 @@ header {
                 }
 
                 &_item {
-                    // display: block;
-
-                    // @media screen and (max-width: 1024px) {
-                    //     display: flex;
-                    //     justify-content: space-between;
-                    // }
 
                     a {
                         transform: translateX(-10px);
@@ -191,31 +185,6 @@ header {
                             display: inline-block;
 
                             opacity: 0;
-                        }
-                    }
-
-                    &--home {
-                        display: none;
-
-                        @media screen and (max-width: 1024px) {
-                            display: block;
-                            box-shadow: 0 2px 0.5rem 0.1rem rgba($black, 25%);
-                            z-index: 1;
-                        }
-
-                        &-link {
-                            opacity: 0;
-                            padding: 8px 0 1px 5px;
-                            height: 100%;
-                            width: 100%;
-                            transform: translateX(-10px);
-                            transition: transform 0.2s ease-in-out 0.2s, opacity 0.2s linear 0.2s;
-
-                            &-svg {
-                                fill: $secondary-color;
-                                width: 1.6em;
-                                height: 1.6em;
-                            }
                         }
                     }
                 }
@@ -314,18 +283,6 @@ header {
                     margin-top: 3px;
                 }
             }
-
-            &_ul {
-                @media screen and (max-width: 1024px) {
-                    position: fixed;
-                    top: 60px;
-                    left: 0;
-                    width: 100%;
-                    opacity: 0;
-                    transition: 0.3s opacity;
-                    background: $white;
-                }
-            }
         }
     }
 
@@ -393,6 +350,43 @@ header {
 
             @media screen and (max-width: 1024px) {
                 padding: 5px 0 5px 10px;
+            }
+        }
+    }
+}
+
+.navbar {
+    @media screen and (max-width: 1024px) {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: 0.3s opacity;
+        background: $white;
+    }
+
+    &_container-navbar_item--home {
+        display: none;
+
+        @media screen and (max-width: 1024px) {
+            display: block;
+            box-shadow: 0 2px 0.5rem 0.1rem rgba($black, 25%);
+            z-index: 1;
+        }
+
+        &-link {
+            opacity: 0;
+            padding: 8px 0 1px 5px;
+            height: 100%;
+            width: 100%;
+            transform: translateX(-10px);
+            transition: transform 0.2s ease-in-out 0.2s, opacity 0.2s linear 0.2s;
+
+            &-svg {
+                fill: $secondary-color;
+                width: 1.6em;
+                height: 1.6em;
             }
         }
     }
